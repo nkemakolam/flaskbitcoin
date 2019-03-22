@@ -2,6 +2,7 @@
     <head>
         <title>test flask</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel= "stylesheet" href="./static/style.css">
     </head>
     <body>
         <div class ="container-fluid">
@@ -14,7 +15,11 @@
                         
                         <div class="panel panel-default">
                        <div class="panel-body">
-                         Basic panel example
+                        <span class="boxValue"><center>
+                                {{data['time']['updated']}} 
+                            </center>
+                            <div><center>Date</center></div>
+                        </span> 
                        </div>
                      </div>
                        </div>
@@ -24,7 +29,11 @@
                             
                             <div class="panel panel-default">
                            <div class="panel-body">
-                             Basic panel example
+                                <span class="boxValue"><center>
+                            {{data['chartName']}}
+                        </center>
+                            <div><center>Name</center></div>
+                        </span> 
                            </div>
                          </div>
                            </div>
@@ -33,10 +42,28 @@
                                
                                 <div class="panel panel-default">
                                <div class="panel-body">
-                                 Basic panel example
+                                    <span class="boxValue">
+                                        <center>
+                                 {{data['bpi']['USD']['code']}}
+                                </center>
+                                 <div><center>Currency</center></div>
+                                </span> 
                                </div>
                              </div>
                                </div>
+
+                               <div class="col-md-3">
+                               
+                                    <div class="panel panel-default">
+                                   <div class="panel-body">
+                                        <span class="boxValue"><center>
+                                     {{data['bpi']['USD']['rate_float']}}
+                                    </center>
+                                     <div><center>Rate</center></div>
+                                    </span> 
+                                   </div>
+                                 </div>
+                                   </div>
                            
                </div>
              <div class ="col-md-1"></div>
